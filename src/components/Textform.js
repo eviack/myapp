@@ -31,7 +31,7 @@ export default function Textform(props) {
     }
     function countWord(){
         let count = 0;
-        let array = text.split(" ");
+        let array = text.split(/\s+/);
         console.log(array);
         
         for(let i of array){
