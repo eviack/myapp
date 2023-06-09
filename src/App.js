@@ -9,7 +9,7 @@ import React,{useState} from "react";
 
 import {
   BrowserRouter,
-  Routes, Route, Link
+  Routes, Route
 } from 'react-router-dom';
 
 function App() {
@@ -55,9 +55,9 @@ function App() {
 
     <Routes>
 
-      <Route path="/" element={<div className="container"><Textform generateAlert={generateAlert} title="Enter the text to analyse" row="10" mode={mode} toggleMode={toggleMode}/></div>}/>
+      <Route exact path="/" element={<div className="container"><Textform generateAlert={generateAlert} title="Enter the text to analyse" row="10" mode={mode} toggleMode={toggleMode}/></div>}/>
 
-      <Route path="/about" element={<div className='container'> <About/></div>}/>
+      <Route exact path="/about" element={<div className='container'> <About/></div>}/>
 
     </Routes>
     </BrowserRouter>
